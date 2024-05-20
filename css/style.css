@@ -124,6 +124,10 @@
     color: var(--bs-secondary) !important;
 }
 
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffa31a
+    ;
+}
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -155,7 +159,7 @@
     background-color:  #0D87B9;
 }
 .custom-bg-brandcolornav {
-    background-color:  #e78686;
+    background-color:  #ffa31a;
 }
 
 .custom-bgs-color {
