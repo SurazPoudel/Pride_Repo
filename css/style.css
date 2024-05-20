@@ -479,6 +479,7 @@
 
 /*** Team Start ***/
 
+/* Your existing styles */
 .team-item {
     border-top: 30px solid var(--bs-secondary) !important;
     background: rgba(239, 239, 241, 0.8);
@@ -522,10 +523,46 @@
     border: 10px solid var(--bs-secondary);
 }
 
-.team-carousel .owl-stage {
-    position: relative;
-    width: 100%;
+/* New styles for CSS Grid */
+.team-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
+}
+
+.team-name {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.team-icon {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.team-img-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-img {
+    margin-bottom: 10px;
 }
 
 .team-carousel .owl-nav {
@@ -558,6 +595,7 @@
 @media (max-width: 992px) {
     .team-carousel {
         margin-top: 3rem;
+        grid-template-columns: 1fr;
     }
 
     .team-carousel .owl-nav {
