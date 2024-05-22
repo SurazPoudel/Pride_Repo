@@ -29,7 +29,26 @@
         return false;
     });
 
-
+//    email
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(event) {
+            const name = form.querySelector('[name="name"]').value.trim();
+            const email = form.querySelector('[name="email"]').value.trim();
+            const project = form.querySelector('[name="project"]').value.trim();
+            const message = form.querySelector('[name="message"]').value.trim();
+    
+            if (!name || !email || !project || !message) {
+                event.preventDefault();
+                alert('Please fill out all fields.');
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                event.preventDefault();
+                alert('Please enter a valid email address.');
+            }
+        });
+    });
+   
+    
     // Team carousel
     $(".team-carousel").owlCarousel({
         autoplay: true,
