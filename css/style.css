@@ -137,6 +137,8 @@
     margin-inline-start: 8px;
 }
 
+
+
 @media (min-inline-size: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
