@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form inputs
     $name = htmlspecialchars($_POST['name']);
@@ -7,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Your email address where you want to receive the email
-    $to = "office@pride.info.np";
+    $to = "bibasreule44@gmail.com";
     $subject = "New Contact Form Submission: $project";
 
     // Construct the email body
